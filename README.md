@@ -22,13 +22,6 @@ Before starting, make sure you have:
 3. Choose a project name and visibility (Private/Public)
 4. Click **Create**
 
-graph TD
-A[Azure DevOps Dashboard] --> B[Select 'Repos']
-B --> C[Click 'Create Repository']
-C --> D[Enter Project Name & Visibility]
-D --> E[Repository Created Successfully]
-
----
 
 ## 💻 Step 2: Clone the Repo and Create Your Flutter Project
 
@@ -40,9 +33,6 @@ cd <repo-name>
 flutter create .
 ```
 
-## Now your Flutter project files are in the Azure DevOps repo directory.
-<!-- 📸 Image: Terminal showing repo cloned and Flutter project created -->
----
 
 ## 🚀 Step 3: Commit and Push Your Code
 
@@ -52,10 +42,6 @@ git commit -m "Initial Flutter project setup"
 git push origin main
 ```
 
-## Return to Azure DevOps → Repos → verify your Flutter files are visible.
-<!-- 📸 Image: Azure DevOps Repo dashboard showing Flutter files -->
----
-
 
 ## ⚙️ Step 4: Set Up Your Azure Pipeline YAML File
 In your project root (or under an azure folder), create:
@@ -64,7 +50,7 @@ In your project root (or under an azure folder), create:
 azure-production.yaml
 ```
 This YAML file defines the CI/CD pipeline.
----
+
 
 ## 🔧 Step 5: Create Library Variables (Flutter & Java Versions)
 
@@ -81,8 +67,7 @@ In Azure DevOps:
 | `KEYSTORE_PASSWORD` | *****         | Keystore password              |
 | `KEYSTORE_FILE`     | key.jks       | Uploaded secure file           |
 
-<!-- 📸 Image: Azure Library Variables configuration screenshot -->
----
+
 
 ## 🧩 Step 6: Define Your Azure Pipeline
 Example azure-production.yaml:
@@ -137,8 +122,7 @@ steps:
     displayName: 'Upload to Google Play'
 
 ```
-<!-- 📸 Image: Azure pipeline YAML editor -->
----
+
 
 ## 🍎 Step 7: iOS Build (Optional)
 For iOS, use a macOS agent:
@@ -152,8 +136,7 @@ steps:
     displayName: 'Build iOS Release'
 ```
 Then configure an App Store Release task to upload to TestFlight or the App Store.
-<!-- 📸 Image: macOS agent pipeline selection -->
----
+
 
 ## ✅ Step 8: Run Your Pipeline
 Go to:
@@ -164,9 +147,6 @@ Select your azure-production.yaml and click Run.
 
 You’ll see logs for each stage (install, build, sign, release).
 
-<!-- 📸 Image: Azure pipeline run view with successful build -->
-
----
 
 ## 📘 Summary
 
@@ -177,11 +157,7 @@ You’ll see logs for each stage (install, build, sign, release).
 | Pipeline   | Wrote YAML to automate build, sign, and deploy  |
 | CI/CD      | Ran pipeline to build and release automatically |
 
----
 
-## 🖼 Example CI/CD Flow Diagram
-<!-- 📸 Image: Diagram showing developer push → Azure build → Sign → Deploy -->
-----
 
 ## ✨ Conclusion
 
