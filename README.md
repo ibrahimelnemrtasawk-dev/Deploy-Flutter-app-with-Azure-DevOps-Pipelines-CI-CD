@@ -68,7 +68,7 @@ In Azure DevOps:
 1. Go to Pipelines → Library → + Variable Group
 2. Add variables like:
    
-   | Variable Name       | Example Value | Description                    |
+| Variable Name       | Example Value | Description                    |
 | ------------------- | ------------- | ------------------------------ |
 | `FLUTTER_VERSION`   | 3.24.3        | Flutter SDK version            |
 | `JAVA_VERSION`      | 17            | Java version for Android build |
