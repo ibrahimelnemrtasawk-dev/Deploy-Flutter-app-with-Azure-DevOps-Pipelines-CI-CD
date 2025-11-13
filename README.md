@@ -22,7 +22,11 @@ Before starting, make sure you have:
 3. Choose a project name and visibility (Private/Public)
 4. Click **Create**
 
-<!-- 📸 Image: Azure DevOps “Create Repository” screen -->
+graph TD
+A[Azure DevOps Dashboard] --> B[Select 'Repos']
+B --> C[Click 'Create Repository']
+C --> D[Enter Project Name & Visibility]
+D --> E[Repository Created Successfully]
 
 ---
 
